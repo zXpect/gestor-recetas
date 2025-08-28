@@ -108,7 +108,7 @@ git add gestor-recetas/recetas/colombianas.md
 git commit -m "Resuelvo conflicto en colombianas.md unificando recetas de arepas"
 ```
 
-![Conflicto y resolución](gestor-recetas/docs/img/checkout.png)
+![Conflicto y resolución](gestor-recetas/docs/img/conflicto-01.png)
 
 ---
 

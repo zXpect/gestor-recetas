@@ -211,7 +211,6 @@ gestor-recetas/
 ### 👥 Colaboradores
 - **Fabian (zXpect)** - Administrador del repositorio y desarrollo de recetas italianas
 - **Breider (Car0nte092)** - Desarrollo de recetas colombianas y mexicanas
-- **Maikoll Ballesteros** - Colaborador en documentación
 
 ---
 
@@ -238,7 +237,7 @@ Si el video no se reproduce correctamente, puedes acceder directamente:
 | Ramas creadas | 4 |
 | Conflictos resueltos | 2 |
 | Archivos modificados | 6+ |
-| Colaboradores | 3 |
+| Colaboradores | 2 |
 | Duración del proyecto | Múltiples sesiones |
 
 ---

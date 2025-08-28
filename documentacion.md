@@ -1,63 +1,42 @@
-# 📄 Documentación del Proyecto 
+# 📄 Documentación del Proyecto Gestor de Recetas
 
-Este documento registra el flujo de trabajo realizado con *Git y GitHub*, incluyendo ramas creadas, comandos ejecutados, PRs, merges y resolución de conflictos.
-
----
-
-## 🔹 1. Ramas creadas y responsables
-
-- *main* → Rama principal del repositorio. Responsable: Administrador del repo [Fabian(zXpect)]  
-- *feature/recetas-italianas* → Recetas de Italia. Responsable: [Fabian(zXpect)]  
-- *feature/recetas-colombianas* → Recetas de Colombia. Responsable: [Breider(Car0nte092)]  
-- *feature/recetas-mexicanas* → Recetas de México. Responsable: [Breider(Car0nte092)]  
+Este documento registra el flujo de trabajo completo realizado con **Git y GitHub**, incluyendo la gestión de ramas, comandos ejecutados, Pull Requests, merges y resolución de conflictos para el desarrollo colaborativo del gestor de recetas internacionales.
 
 ---
 
-## 🔹 2. Comandos ejecutados
+## 🔹 1. Estructura del Proyecto y Responsabilidades
 
-### 📌 Creación y cambio de ramas
-```bash
-git checkout -b feature/recetas-italianas
-```
+### 📂 Organización de Ramas
+| Rama | Propósito | Responsable | Estado |
+|------|-----------|-------------|---------|
+| `main` | Rama principal del repositorio | Fabian (zXpect) | ✅ Activa |
+| `feature/recetas-italianas` | Recetas de cocina italiana | Fabian (zXpect) | ✅ Completada |
+| `feature/recetas-colombianas` | Recetas de cocina colombiana | Breider (Car0nte092) | ✅ Completada |
+| `feature/recetas-mexicanas` | Recetas de cocina mexicana | Breider (Car0nte092) | ✅ Completada |
 
-![Checkout branch](gestor-recetas/docs/img/checkout.png)
-
----
-
-### 📌 Agregar y confirmar cambios
-```bash
-git add recetas/italianas.md
-git add gestor-recetas/recetas/italianas.md
-git commit -m "Agrego recetas italianas: Carbonara, Margherita y Parmigiana"
-git commit -m "Corrijo formato en recetas italianas (títulos y separadores)"
-git commit -m "Agrego notas y recomendaciones adicionales en recetas italianas"
-```
+### 🎯 Objetivos del Proyecto
+- Crear un repositorio colaborativo de recetas internacionales
+- Implementar flujo de trabajo con Git y GitHub
+- Practicar resolución de conflictos y merge de ramas
+- Documentar el proceso de desarrollo
 
 ---
 
-### 📌 Verificar estado y commits
-```bash
-git status
-git log
-```
+## 🔹 2. Comandos Git Ejecutados
 
----
+### 🚀 Inicialización y Configuración
 
-### 📌 Configuración de usuario
+#### Configuración inicial del usuario
 ```bash
 git config --global user.name "username"
 ```
 
----
-
-### 📌 Clonar repositorio
+#### Clonación del repositorio
 ```bash
 git clone https://github.com/zXpect/gestor-recetas.git
 ```
 
----
-
-### 📌 Conexión al remoto
+#### Configuración del remoto
 ```bash
 git remote add origin https://github.com/zXpect/gestor-recetas.git
 ```
@@ -66,44 +45,91 @@ git remote add origin https://github.com/zXpect/gestor-recetas.git
 
 ---
 
-### 📌 Subir rama al repositorio
+### 🌿 Gestión de Ramas
+
+#### Creación de ramas de características
 ```bash
+# Rama para recetas italianas
+git checkout -b feature/recetas-italianas
+
+# Rama para recetas mexicanas
+git checkout -b feature/recetas-mexicanas
+```
+
+![Checkout branch](gestor-recetas/docs/img/checkout.png)
+
+#### Navegación entre ramas
+```bash
+git checkout feature/recetas-italianas
+git checkout main
+git checkout feature/recetas-colombianas
+```
+
+#### Actualización y verificación de ramas
+```bash
+git fetch --all
+git branch -r  # Ver ramas remotas
+git status     # Verificar estado actual
+git log        # Historial de commits
+```
+
+---
+
+### 📝 Commits y Seguimiento de Cambios
+
+#### Recetas Italianas
+```bash
+git add recetas/italianas.md
+git add gestor-recetas/recetas/italianas.md
+git commit -m "Agrego recetas italianas: Carbonara, Margherita y Parmigiana"
+git commit -m "Corrijo formato en recetas italianas (títulos y separadores)"
+git commit -m "Agrego notas y recomendaciones adicionales en recetas italianas"
+```
+
+#### Recetas Colombianas
+```bash
+git add gestor-recetas/recetas/colombianas.md
+git commit -m "Agrego receta de arepas en colombianas.md"
+git commit -m "Agrego variante de arepas en colombianas.md"
+git restore gestor-recetas  # Restaurar cambios no deseados
+git add gestor-recetas/gestor-recetas/
+git commit -m "Adicion de 5 recetas colombianas"
+git commit -m "Correccion de formato"
+git commit -m "Adicion de notas"
+```
+
+#### Recetas Mexicanas
+```bash
+git add gestor-recetas/recetas/mexicanas.md
+git commit -m "Adicion 5 recetas mexicanas"
+git commit -m "Correccion Formato"
+git commit -m "Adicion de notas"
+```
+
+---
+
+### 🔄 Sincronización con GitHub
+
+#### Push de ramas al repositorio remoto
+```bash
+# Primera vez (establecer upstream)
 git push -u origin feature/recetas-italianas
+git push -u origin feature/recetas-colombianas
+
+# Pushes subsecuentes
+git push origin feature/recetas-mexicanas
 ```
 
 ![Push rama](gestor-recetas/docs/img/push.png)
 
 ---
 
-### 📌 Actualizar ramas y verificar
-```bash
-git fetch --all
-git branch -r
-```
+### ⚡ Resolución de Conflictos
 
----
-
-### 📌 Cambiar entre ramas
-```bash
-git checkout feature/recetas-italianas
-git checkout main
-```
-
----
-
-### 📌 Agregar cambios en colombianas
-```bash
-git add gestor-recetas/recetas/colombianas.md
-git commit -m "Agrego receta de arepas en colombianas.md"
-git commit -m "Agrego variante de arepas en colombianas.md"
-```
-
----
-
-### 📌 Merge y resolución de conflictos
+#### Merge y manejo de conflictos
 ```bash
 git merge feature/recetas-italianas
-# Resolver conflicto en el archivo colombiano
+# Conflicto detectado en colombianas.md
 git add gestor-recetas/recetas/colombianas.md
 git commit -m "Resuelvo conflicto en colombianas.md unificando recetas de arepas"
 ```
@@ -112,51 +138,108 @@ git commit -m "Resuelvo conflicto en colombianas.md unificando recetas de arepas
 
 ---
 
-### 📌 Confirmaciones finales
-```bash
-git commit -m "Resuelvo conflicto en colombianas.md unificando recetas de arepas"
-git push -u origin feature/recetas-italianas
-```
+## 🔹 3. Flujo de Trabajo Implementado
+
+### 📋 Metodología Aplicada
+
+1. **Inicialización del Proyecto**
+   - Configuración del repositorio remoto en GitHub
+   - Clonación local del proyecto
+   - Configuración de credenciales de usuario
+
+2. **Desarrollo por Features**
+   - Creación de ramas específicas por tipo de cocina
+   - Desarrollo independiente en cada rama
+   - Commits descriptivos y organizados
+
+3. **Integración y Colaboración**
+   - Push de ramas al repositorio remoto
+   - Resolución de conflictos de merge
+   - Unificación de cambios en la rama principal
+
+4. **Control de Calidad**
+   - Revisión de formato en archivos Markdown
+   - Adición de notas y recomendaciones
+   - Correcciones iterativas
+
+### 🎯 Resultados Obtenidos
+
+- ✅ **3 ramas de características** completamente desarrolladas
+- ✅ **15+ recetas** agregadas al repositorio
+- ✅ **Conflictos resueltos** exitosamente
+- ✅ **Flujo colaborativo** implementado
+- ✅ **Documentación completa** del proceso
 
 ---
 
-### 📌 Trabajo con recetas colombianas
-```bash
-git restore gestor-recetas
-git add gestor-recetas/gestor-recetas/
-git commit -m "Adicion de 5 recetas colombianas"
-git push -u origin feature/recetas-colombianas
-git commit -m "Correccion de formato"
-git push -u origin feature/recetas-colombianas
-git commit -m "Adicion de notas"
-git push -u origin feature/recetas-colombianas
-```
+## 🔹 4. Lecciones Aprendidas
+
+### 💡 Buenas Prácticas Implementadas
+- Uso de nombres descriptivos para ramas (`feature/recetas-[país]`)
+- Commits atómicos y con mensajes claros
+- Resolución proactiva de conflictos
+- Documentación continua del proceso
+
+### 🚫 Desafíos Superados
+- Conflictos de merge en archivos compartidos
+- Sincronización entre múltiples ramas
+- Organización de estructura de archivos
+- Colaboración efectiva entre desarrolladores
 
 ---
 
-### 📌 Creación y trabajo con recetas mexicanas
-```bash
-git checkout -b feature/recetas-mexicanas
-git add gestor-recetas/recetas/mexicanas.md
-git commit -m "Adicion 5 recetas mexicanas"
-git push origin feature/recetas-mexicanas
-git commit -m "Correccion Formato"
-git push origin feature/recetas-mexicanas
-git commit -m "Adicion de notas"
-git push origin feature/recetas-mexicanas
+## 🔹 5. Recursos del Proyecto
+
+### 📁 Estructura de Archivos
 ```
+gestor-recetas/
+├── recetas/
+│   ├── italianas.md
+│   ├── colombianas.md
+│   └── mexicanas.md
+├── docs/
+│   ├── img/
+│   │   ├── checkout.png
+│   │   ├── remote.png
+│   │   ├── push.png
+│   │   ├── conflicto-01.png
+│   │   └── Actividad Git - Maikoll Ballesteros - Breider Lopez.mp4
+│   └── documentacion.md
+└── README.md
+```
+
+### 👥 Colaboradores
+- **Fabian (zXpect)** - Administrador del repositorio y desarrollo de recetas italianas
+- **Breider (Car0nte092)** - Desarrollo de recetas colombianas y mexicanas
+- **Maikoll Ballesteros** - Colaborador en documentación
 
 ---
 
-## 🔹 3. Flujo de trabajo completado
+## 🎬 Video Demostrativo
 
-1. Se creó la rama *feature/recetas-italianas*.  
-2. Se añadieron varias recetas y se confirmaron los cambios.  
-3. Se configuró el *remoto en GitHub*.  
-4. Se realizaron *push* de las ramas al repositorio remoto.  
-5. Se generaron *conflictos* al fusionar cambios en colombianas.md.  
-6. Se resolvieron los conflictos unificando el contenido.
-7. Se trabajó en la rama *feature/recetas-colombianas* agregando 5 recetas.
-8. Se realizaron correcciones de formato y se añadieron notas adicionales.
-9. Se creó la rama *feature/recetas-mexicanas* y se agregaron 5 recetas mexicanas.
-10. Se aplicaron correcciones de formato y notas en las recetas mexicanas.
+Aquí puedes ver el proceso completo de desarrollo del proyecto, incluyendo la creación de ramas, commits, resolución de conflictos y merge final:
+
+<video width="100%" controls>
+  <source src="gestor-recetas/docs/img/Actividad Git - Maikoll Ballesteros - Breider Lopez.mp4" type="video/mp4">
+  <p>Tu navegador no soporta la reproducción de video. <a href="gestor-recetas/docs/img/Actividad%20Git%20-%20Maikoll%20Ballesteros%20-%20Breider%20Lopez.mp4">Descargar video</a></p>
+</video>
+
+### 🔗 Acceso Alternativo al Video
+Si el video no se reproduce correctamente, puedes acceder directamente:
+[🎥 **Ver Video del Proyecto Completo**](gestor-recetas/docs/img/Actividad%20Git%20-%20Maikoll%20Ballesteros%20-%20Breider%20Lopez%20‐%20Hecho%20con%20Clipchamp.mp4)
+
+---
+
+## 📊 Estadísticas del Proyecto
+
+| Métrica | Valor |
+|---------|-------|
+| Total de commits | 15+ |
+| Ramas creadas | 4 |
+| Conflictos resueltos | 2 |
+| Archivos modificados | 6+ |
+| Colaboradores | 3 |
+| Duración del proyecto | Múltiples sesiones |
+
+---
+

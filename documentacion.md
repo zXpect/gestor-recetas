@@ -202,8 +202,7 @@ gestor-recetas/
 │   │   ├── checkout.png
 │   │   ├── remote.png
 │   │   ├── push.png
-│   │   ├── conflicto-01.png
-│   │   └── Actividad Git - Maikoll Ballesteros - Breider Lopez.mp4
+│   │   └── conflicto-01.png
 │   └── documentacion.md
 └── README.md
 ```
@@ -218,14 +217,9 @@ gestor-recetas/
 
 Aquí puedes ver el proceso completo de desarrollo del proyecto, incluyendo la creación de ramas, commits, resolución de conflictos y merge final:
 
-<video width="100%" controls>
-  <source src="gestor-recetas/docs/img/Actividad Git - Maikoll Ballesteros - Breider Lopez.mp4" type="video/mp4">
-  <p>Tu navegador no soporta la reproducción de video. <a href="gestor-recetas/docs/img/Actividad%20Git%20-%20Maikoll%20Ballesteros%20-%20Breider%20Lopez.mp4">Descargar video</a></p>
-</video>
+### 📺 [**Ver Video del Proyecto Completo en YouTube**](https://youtu.be/pBk5onpu4tw?feature=shared)
 
-### 🔗 Acceso Alternativo al Video
-Si el video no se reproduce correctamente, puedes acceder directamente:
-[🎥 **Ver Video del Proyecto Completo**](gestor-recetas/docs/img/Actividad%20Git%20-%20Maikoll%20Ballesteros%20-%20Breider%20Lopez%20‐%20Hecho%20con%20Clipchamp.mp4)
+
 
 ---
 
@@ -241,4 +235,3 @@ Si el video no se reproduce correctamente, puedes acceder directamente:
 | Duración del proyecto | Múltiples sesiones |
 
 ---
-
